@@ -1,0 +1,9 @@
+{
+  "name": "caras-partner-booking-mailer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cal.eu booking webhook -> welcome email via Gmail, for Caras Partner",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}
