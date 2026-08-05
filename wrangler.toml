@@ -1,0 +1,12 @@
+name = "caras-partner-website"
+# Replace with your Cloudflare Account ID
+account_id = "<YOUR_CLOUDFLARE_ACCOUNT_ID>"
+compatibility_date = "2026-08-03"
+
+# For Pages, set the project name and build settings if needed. This is a minimal template.
+[build]
+command = "npm run build"
+
+# You should set secrets in Cloudflare dashboard or with `wrangler secret put`:
+# - ANTHROPIC_API_KEY
+# - CLAUDE_MODEL (optional)

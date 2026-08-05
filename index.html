@@ -15,6 +15,67 @@
 </head>
 <body>
 
+<!-- Structured data: Organization + Service + FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Caras Partner",
+      "url": "https://caraspartner.com",
+      "logo": "https://caraspartner.com/assets/logo-icon.png",
+      "sameAs": [
+        "https://www.instagram.com/caraspartner/",
+        "https://www.facebook.com/caraspartner/"
+      ],
+      "email": "partner.caras@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tabaklar, İzzet Baysal Cd. Güler2 İş Hanı",
+        "addressLocality": "Bolu",
+        "postalCode": "14100",
+        "addressCountry": "TR"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+905324556114",
+        "contactType": "customer service",
+        "areaServed": "TR",
+        "availableLanguage": "Turkish"
+      }]
+    },
+    {
+      "@type": "Service",
+      "name": "Meta Reklam Yönetimi",
+      "provider": { "@type": "Organization", "name": "Caras Partner" },
+      "description": "Instagram ve Facebook reklam yönetimi, kampanya kurulumu ve optimizasyon hizmetleri.",
+      "url": "https://caraspartner.com/#hizmetler"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Caras Partner kimdir?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Caras Partner, Instagram ve Facebook (Meta) reklamlarında uzmanlaşmış bir dijital büyüme ajansıdır; kurulum, kampanya yönetimi ve ciro odaklı optimizasyon sağlar." }
+        },
+        {
+          "@type": "Question",
+          "name": "Fiyatlar nasıl belirleniyor?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Paketlerimiz sabit bütçeli olup reklam bütçesi ayrı tutulur; detaylar için Paketler bölümüne bakınız veya ücretsiz görüşme talep edin." }
+        },
+        {
+          "@type": "Question",
+          "name": "Hangi şehirlerde hizmet veriyorsunuz?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Hizmetimiz tamamen dijital olduğu için Türkiye'nin her yerindeki markalara hizmet veriyoruz." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <div class="grain"></div>
 
 <!-- ============ ANNOUNCEMENT BAR ============ -->

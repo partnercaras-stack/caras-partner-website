@@ -72,19 +72,29 @@ export async function onRequestPost(context) {
     return jsonResponse({ error: "messages array is required" }, 400);
   }
 
+    const anthropicApiKey = env.ANTHROPIC_API_KEY;
+  if (!anthropicApiKey) {
+    console.error("Missing ANTHROPIC_API_KEY in env");
+    return jsonResponse({ error: "Asistan şu anda yanıt veremiyor." }, 502);
+  }
+
+  const requestBody = {
+    model: env.CLAUDE_MODEL || "claude-sonnet-5",
+    max_tokens: 400,
+    messages: [
+      { role: "system", content: SYSTEM_PROMPT },
+      ...messages
+    ]
+  };
+
   const response = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      "x-api-key": env.ANTHROPIC_API_KEY,
+      "x-api-key": anthropicApiKey,
       "anthropic-version": "2023-06-01"
     },
-    body: JSON.stringify({
-      model: env.CLAUDE_MODEL || "claude-sonnet-5",
-      max_tokens: 400,
-      system: SYSTEM_PROMPT,
-      messages
-    })
+    body: JSON.stringify(requestBody)
   });
 
   if (!response.ok) {
@@ -94,8 +104,11 @@ export async function onRequestPost(context) {
   }
 
   const data = await response.json();
-  const reply = data.content && data.content[0] && data.content[0].text;
-  return jsonResponse({ reply: reply || "Üzgünüm, şu anda yanıt veremiyorum." });
+  const reply = data.completion ||
+    (data.output && data.output[0] && data.output[0].content && data.output[0].content[0] && data.output[0].content[0].text) ||
+    (data.content && data.content[0] && data.content[0].text) ||
+    "Üzgünüm, şu anda yanıt veremiyorum.";
+  return jsonResponse({ reply });
 }
 
 function jsonResponse(body, status = 200) {

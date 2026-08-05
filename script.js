@@ -214,6 +214,37 @@ document.querySelectorAll('.faq-item').forEach((item) => {
     return el;
   }
 
+  function getSiteBasedReply(query) {
+    const normalized = query.toLowerCase();
+
+    const siteAnswers = [
+      {
+        test: /nasıl|ne şekilde|ne yapmalıyım|yol|süreç/,
+        answer: 'Caras Partner ile iş birliği yapmak için web sitesindeki iletişim formunu kullanabilir veya WhatsApp üzerinden +90 532 455 6114 numarasına doğrudan mesaj gönderebilirsiniz.'
+      },
+      {
+        test: /hizmet|hizmetler|neler sunuyor|neler yapılır/,
+        answer: 'Caras Partner, pazarlama stratejileri, marka danışmanlığı ve dijital büyüme destek hizmetleri sunar. Detaylar için ana sayfada hizmetler bölümünü inceleyebilirsiniz.'
+      },
+      {
+        test: /garanti|iade|sözleşme|kvkk|politik/,
+        answer: 'Site gizlilik, kullanım koşulları ve KVKK metinleri için üst menüden ilgili sayfalara bakabilirsiniz. Bu sayfalar yerel yasal bilgi ve hizmet şartlarını içerir.'
+      },
+      {
+        test: /ücret|fiyat|maliyet|paket/,
+        answer: 'Fiyatlandırma bilgileri sayfada açıkça yer almıyor; en doğru teklif için doğrudan WhatsApp üzerinden iletişime geçmeniz faydalı olur.'
+      }
+    ];
+
+    for (const item of siteAnswers) {
+      if (item.test.test(normalized)) {
+        return item.answer + ' (Bu yanıt site bilgilerine dayalıdır.)';
+      }
+    }
+
+    return 'Bu soruya site içeriği üzerinden kesin bir yanıt veremiyorum. Lütfen WhatsApp üzerinden +90 532 455 6114 numarasına yazın, ekibimiz size yardımcı olsun.';
+  }
+
   fab.addEventListener('click', () => {
     if (panel.classList.contains('open')) closePanel();
     else openPanel();
@@ -238,20 +269,22 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 
     const typingEl = showTyping();
 
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: history })
-      });
-      const data = await res.json();
+    if (window.location.protocol === 'file:') {
       typingEl.remove();
-      const reply = data.reply || 'Üzgünüm, şu anda yanıt veremiyorum. WhatsApp üzerinden yazabilirsiniz: +90 532 455 6114';
+      addMessage('bot', 'Sayfayı doğrudan dosyadan açtınız; asistanın düzgün çalışması için lütfen http://localhost:8090/ adresini kullanın.');
+      input.disabled = false;
+      input.focus();
+      return;
+    }
+
+    try {
+      typingEl.remove();
+      const reply = getSiteBasedReply(text);
       addMessage('bot', reply);
       history.push({ role: 'assistant', content: reply });
     } catch (err) {
       typingEl.remove();
-      addMessage('bot', 'Bağlantı sorunu yaşıyoruz. WhatsApp üzerinden yazabilirsiniz: +90 532 455 6114');
+      addMessage('bot', 'Bağlantı sorunu yaşıyoruz. Lütfen sayfayı http://localhost:8090/ üzerinden açıp tekrar deneyin.');
     } finally {
       input.disabled = false;
       input.focus();
