@@ -18,7 +18,6 @@ Hizmetler:
 Çalışma süreci: Ücretsiz Zoom Görüşmesi (30 dk) → Strateji → Kurulum → Optimizasyon → Raporlama.
 
 Paketler (KDV hariç, reklam bütçesi pakete dahil değil, doğrudan Meta'ya ödenir):
-- Tek Seferlik: 7.000₺ (tek ödeme) — Meta Business hesabı kurulumu/denetimi, rakip analizine dayalı tek kampanya stratejisi, çekim yönlendirmesi + kreatif uyarlama, 2 hafta yönetim. İşletme başına yalnızca bir kez alınabilir.
 - Aylık: 15.000₺/ay — tam kampanya yönetimi, video/foto çekim yönlendirmesi + kurgu, rakip analizine dayalı kampanya/indirim önerileri, haftalık A/B test, istediğin zaman iptal.
 - 3 Aylık (Önerilen): 13.500₺/ay (toplam 40.500₺, %10 avantaj) — Aylık paket + retargeting + öncelikli destek + ayda 2 strateji görüşmesi.
 - 6 Aylık: 12.000₺/ay (toplam 72.000₺, %20 avantaj) — 3 aylık paket + çeyreklik derin analiz + 6 ay sabit fiyat garantisi.
@@ -58,57 +57,57 @@ export async function onRequestOptions() {
 }
 
 export async function onRequestPost(context) {
-  const { request, env } = context;
-
-  let payload;
   try {
-    payload = await request.json();
-  } catch {
-    return jsonResponse({ error: "Invalid JSON body" }, 400);
-  }
-
-  const { messages } = payload || {};
-  if (!Array.isArray(messages) || messages.length === 0) {
-    return jsonResponse({ error: "messages array is required" }, 400);
-  }
+    const { request, env } = context;
 
     const anthropicApiKey = env.ANTHROPIC_API_KEY;
-  if (!anthropicApiKey) {
-    console.error("Missing ANTHROPIC_API_KEY in env");
-    return jsonResponse({ error: "Asistan şu anda yanıt veremiyor." }, 502);
+    if (!anthropicApiKey) {
+      console.error("ANTHROPIC_API_KEY is not set");
+      return jsonResponse({ reply: "Asistan şu anda kullanılamıyor. WhatsApp üzerinden yazabilirsiniz: +90 532 455 6114" });
+    }
+
+    let payload;
+    try {
+      payload = await request.json();
+    } catch {
+      return jsonResponse({ error: "Invalid JSON body" }, 400);
+    }
+
+    const { messages } = payload || {};
+    if (!Array.isArray(messages) || messages.length === 0) {
+      return jsonResponse({ error: "messages array is required" }, 400);
+    }
+
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "x-api-key": anthropicApiKey,
+        "anthropic-version": "2023-06-01"
+      },
+      body: JSON.stringify({
+        model: env.CLAUDE_MODEL || "claude-sonnet-4-5",
+        max_tokens: 400,
+        system: SYSTEM_PROMPT,
+        messages
+      })
+    });
+
+    if (!response.ok) {
+      const errText = await response.text();
+      console.error("Anthropic API error:", response.status, errText);
+      return jsonResponse({ reply: "Asistan şu anda yanıt veremiyor. WhatsApp üzerinden yazabilirsiniz: +90 532 455 6114" });
+    }
+
+    const data = await response.json();
+    const reply = data.completion ||
+      (data.output && data.output[0] && data.output[0].content && data.output[0].content[0] && data.output[0].content[0].text) ||
+      (data.content && data.content[0] && data.content[0].text);
+    return jsonResponse({ reply: reply || "Üzgünüm, şu anda yanıt veremiyorum. WhatsApp: +90 532 455 6114" });
+  } catch (err) {
+    console.error("Unhandled error in chat function:", err);
+    return jsonResponse({ reply: "Bir hata oluştu. WhatsApp üzerinden yazabilirsiniz: +90 532 455 6114" });
   }
-
-  const requestBody = {
-    model: env.CLAUDE_MODEL || "claude-sonnet-5",
-    max_tokens: 400,
-    messages: [
-      { role: "system", content: SYSTEM_PROMPT },
-      ...messages
-    ]
-  };
-
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-      "x-api-key": anthropicApiKey,
-      "anthropic-version": "2023-06-01"
-    },
-    body: JSON.stringify(requestBody)
-  });
-
-  if (!response.ok) {
-    const errText = await response.text();
-    console.error("Anthropic API error:", response.status, errText);
-    return jsonResponse({ error: "Asistan şu anda yanıt veremiyor." }, 502);
-  }
-
-  const data = await response.json();
-  const reply = data.completion ||
-    (data.output && data.output[0] && data.output[0].content && data.output[0].content[0] && data.output[0].content[0].text) ||
-    (data.content && data.content[0] && data.content[0].text) ||
-    "Üzgünüm, şu anda yanıt veremiyorum.";
-  return jsonResponse({ reply });
 }
 
 function jsonResponse(body, status = 200) {

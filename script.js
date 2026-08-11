@@ -116,8 +116,49 @@ if (heroGlow && heroSection && window.matchMedia('(hover: hover) and (pointer: f
   });
 }
 
+// ===================== ÇEREZ BANNER =====================
+(() => {
+  const banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  if (localStorage.getItem('carasCookieConsent')) { banner.hidden = true; return; }
+  banner.hidden = false;
+  document.getElementById('cookieAccept').addEventListener('click', () => {
+    localStorage.setItem('carasCookieConsent', 'accepted');
+    banner.hidden = true;
+  });
+  document.getElementById('cookieReject').addEventListener('click', () => {
+    localStorage.setItem('carasCookieConsent', 'rejected');
+    banner.hidden = true;
+  });
+})();
+
 // ===================== FOOTER YEAR =====================
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ===================== SAYAÇ (3 GÜNLÜK DÖNGÜ) =====================
+(() => {
+  const el = document.getElementById('countdownTimer');
+  if (!el) return;
+  // Sabit başlangıç noktası — her 3 günde döngü sıfırlanır
+  const ANCHOR_MS = new Date('2026-08-10T00:00:00+03:00').getTime();
+  const CYCLE_MS  = 3 * 24 * 60 * 60 * 1000;
+
+  function tick() {
+    const remaining = CYCLE_MS - ((Date.now() - ANCHOR_MS) % CYCLE_MS);
+    const d  = Math.floor(remaining / 86400000);
+    const h  = Math.floor((remaining % 86400000) / 3600000);
+    const m  = Math.floor((remaining % 3600000)  / 60000);
+    const s  = Math.floor((remaining % 60000)    / 1000);
+    const dayPart = d > 0 ? d + 'Gün ' : '';
+    el.textContent =
+      dayPart +
+      String(h).padStart(2,'0') + ':' +
+      String(m).padStart(2,'0') + ':' +
+      String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
 
 // ===================== TIMELINE MOTION (Çalışma Sürecimiz) =====================
 (() => {
@@ -161,6 +202,7 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 // ===================== CARAS ASİSTAN =====================
 (() => {
   const fab = document.getElementById('assistantFab');
+  if (!fab) return;
   const panel = document.getElementById('assistantPanel');
   const closeBtn = document.getElementById('assistantClose');
   const messagesEl = document.getElementById('assistantMessages');
@@ -297,6 +339,7 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 
 // ===================== CONTACT FORM -> WHATSAPP =====================
 const contactForm = document.getElementById('contactForm');
+if (contactForm) {
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.getElementById('name').value.trim();
@@ -312,3 +355,4 @@ contactForm.addEventListener('submit', (e) => {
   const url = `https://wa.me/905324556114?text=${encodeURIComponent(text)}`;
   window.open(url, '_blank', 'noopener');
 });
+}

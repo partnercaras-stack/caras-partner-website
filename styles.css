@@ -100,6 +100,9 @@ input,textarea{font-family:inherit;font-size:1rem;}
   display:flex;align-items:center;justify-content:space-between;
   column-gap:24px;
   height:84px;
+  max-width:none;
+  margin-left:0;
+  margin-right:0;
   transition:height .3s var(--ease);
 }
 .site-header.is-scrolled .header-inner{height:68px;}
@@ -338,7 +341,7 @@ input,textarea{font-family:inherit;font-size:1rem;}
 .timeline-item.focused .timeline-body p{color:var(--ink);}
 
 /* ===================== PRICING ===================== */
-.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:56px;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:56px;}
 .price-card{
   background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
   padding:36px 28px;display:flex;flex-direction:column;
@@ -435,7 +438,18 @@ input,textarea{font-family:inherit;font-size:1rem;}
 .faq-more{margin-top:36px;color:var(--ink-soft);font-size:0.95rem;}
 .faq-more a{color:var(--green-deep);font-weight:600;text-decoration:underline;text-underline-offset:3px;}
 
-/* ===================== ANNOUNCEMENT BAR ===================== */
+.announce-timer{
+  display:inline-block;
+  background:rgba(111,207,111,0.2);
+  border:1px solid rgba(111,207,111,0.4);
+  color:var(--green-bright);
+  font-family:var(--ff-display);font-weight:700;
+  padding:2px 10px;border-radius:6px;
+  font-size:0.88rem;letter-spacing:0.06em;
+  margin:0 8px;
+}
+
+/* ===================== ANNOUNCE BAR ===================== */
 .announce-bar{
   background:var(--ink);color:var(--paper);
   display:flex;align-items:center;justify-content:center;gap:10px;
@@ -659,6 +673,21 @@ input,textarea{font-family:inherit;font-size:1rem;}
 }
 .fab-whatsapp svg{width:28px;height:28px;}
 .fab-whatsapp:hover{transform:scale(1.08);}
+
+/* ===================== ÇEREZ BANNER ===================== */
+.cookie-banner{
+  position:fixed;bottom:0;left:0;right:0;z-index:600;
+  background:var(--ink);color:var(--paper);
+  padding:16px 32px;
+  display:flex;align-items:center;justify-content:center;gap:20px;
+  flex-wrap:wrap;
+  box-shadow:0 -8px 30px -10px rgba(0,0,0,0.4);
+}
+.cookie-banner[hidden]{display:none;}
+.cookie-banner p{margin:0;font-size:0.88rem;color:rgba(246,245,239,0.8);flex:1 1 260px;min-width:0;}
+.cookie-banner a{color:var(--green-bright);text-decoration:underline;text-underline-offset:3px;}
+.cookie-actions{display:flex;gap:10px;flex:0 0 auto;flex-wrap:wrap;}
+.btn-sm{padding:9px 20px !important;font-size:0.85rem !important;}
 
 /* ===================== LEGAL PAGES ===================== */
 .legal-hero{padding:64px 0 40px;border-bottom:1px solid var(--line);}

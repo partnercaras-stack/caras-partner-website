@@ -80,7 +80,11 @@
 
 <!-- ============ ANNOUNCEMENT BAR ============ -->
 <div class="announce-bar" id="announceBar">
-  <span>🎯 <strong>Ücretsiz Zoom görüşmesi</strong> + öncelikli değerlendirme — Meta reklamlarında nasıl büyüyebileceğinizi birlikte konuşalım.<a href="#rezervasyon">Hemen randevu alın →</a></span>
+  <span>
+    🔥 <strong>%25 İndirim</strong> — Son kontenjanlar dolmadan rezervasyon yapın!
+    <span class="announce-timer" id="countdownTimer" aria-live="polite">--</span>
+    <a href="rezervasyon.html">Hemen randevu alın →</a>
+  </span>
   <button class="announce-close" id="announceClose" aria-label="Kapat">&times;</button>
 </div>
 
@@ -96,14 +100,14 @@
       <a href="#hizmetler">Hizmetler</a>
       <a href="#surec">Süreç</a>
       <a href="#paketler">Paketler</a>
-      <a href="#rezervasyon">Rezervasyon</a>
-      <a href="#iletisim">İletişim</a>
-      <a href="#sss">S.S.S</a>
+      <a href="rezervasyon.html">Rezervasyon</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="sss.html">S.S.S</a>
     </nav>
 
     <div class="header-cta">
       <a href="https://wa.me/905324556114" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="#rezervasyon" class="btn btn-solid">Ücretsiz Görüşme</a>
+      <a href="rezervasyon.html" class="btn btn-solid">Ücretsiz Görüşme</a>
     </div>
 
     <button class="burger" id="burgerBtn" aria-label="Menüyü aç" aria-expanded="false">
@@ -129,7 +133,7 @@
       erişebileceği bir alternatif sunuyoruz — İstanbul'dan Van'a, aynı kalitede.
     </p>
     <div class="hero-actions reveal" style="--d:3">
-      <a href="#rezervasyon" class="btn btn-solid btn-lg">Ücretsiz Zoom Görüşmesi</a>
+      <a href="rezervasyon.html" class="btn btn-solid btn-lg">Ücretsiz Zoom Görüşmesi</a>
       <a href="https://wa.me/905324556114" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
         <span>WhatsApp'tan Yaz</span>
       </a>
@@ -323,30 +327,11 @@
 
     <div class="pricing-grid">
       <div class="price-card reveal">
-        <h3>Tek Seferlik</h3>
-        <p class="price"><span>₺7.000</span><small>tek ödeme</small></p>
-        <p class="price-scope">Kurulum, kreatif uyarlama, 2 hafta yönetim</p>
-        <ul>
-          <li>Meta Business hesabı kurulumu (yoksa sıfırdan oluşturma)</li>
-          <li>Meta Business Manager ve reklam hesabı denetimi</li>
-          <li>Hedef kitle ve rakip analizine dayalı tek kampanya stratejisi</li>
-          <li>Video ve fotoğraf çekimi için yönlendirme; çektiğiniz materyalin reklam formatına uyarlanması</li>
-          <li>Reklam metninin (copy) yazılması</li>
-          <li>Pixel / dönüşüm takibi kontrolü</li>
-          <li>2 hafta günlük bütçe ve hedefleme takibi</li>
-          <li>Kampanya sonu yazılı performans raporu ve büyüme önerileri</li>
-        </ul>
-        <p class="price-fine">İşletme başına yalnızca bir kez satın alınabilir.</p>
-        <a href="https://wa.me/905324556114?text=Merhaba%2C%20Tek%20Seferlik%20paket%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-outline btn-block">Başlayalım</a>
-        <p class="price-vat-note">Fiyatlara KDV dahil değildir</p>
-      </div>
-
-      <div class="price-card reveal">
         <h3>Aylık</h3>
         <p class="price"><span>₺15.000</span><small>/ ay</small></p>
         <p class="price-scope">Tam kampanya yönetimi ve büyüme danışmanlığı</p>
         <ul>
-          <li>Tek seferlik pakette yer alan tüm hizmetler</li>
+          <li>Meta Business hesabı kurulumu, denetimi ve kampanya stratejisi</li>
           <li>Video ve fotoğraf çekimi için yönlendirme; çektiğiniz materyalin kurgulanıp reklama hazır hale getirilmesi</li>
           <li>Rakip analizine dayalı kampanya ve indirim stratejisi önerileri</li>
           <li>Haftalık A/B testleri (görsel, metin, hedef kitle)</li>
@@ -395,7 +380,7 @@
         <h3>Özel Fiyatlandırma</h3>
         <p>Birden fazla marka veya mağazayı tek çatı altında yöneten, sınırsız ölçekte büyümek isteyen işletmeler için. 6 aylık paketteki her şeye ek olarak: özel katılım süreci, SLA garantili yanıt/raporlama süreleri, entegre çoklu marka yönetimi, öncelikli WhatsApp/telefon desteği ve size özel bir hesap yöneticisi. Minimum 3 aylık anlaşma ile fiyatlandırılır.</p>
       </div>
-      <a href="#rezervasyon" class="btn btn-solid">Teklif Alın</a>
+      <a href="rezervasyon.html" class="btn btn-solid">Teklif Alın</a>
     </div>
 
     <div class="addons reveal">
@@ -457,154 +442,6 @@
   </div>
 </section>
 
-<!-- ============ REZERVASYON (CAL.COM) ============ -->
-<section class="cta-banner" id="rezervasyon">
-  <img src="assets/logo-icon.png" alt="" class="section-watermark section-watermark-dark" aria-hidden="true">
-  <div class="wrap">
-    <h2 class="reveal">Markanızı büyütmeye<br>hazır mısınız?</h2>
-    <p class="reveal">30 dakikalık ücretsiz görüşmede size nasıl yardımcı olabileceğimizi anlatalım. Takvimden size uygun bir saat seçmeniz yeterli.</p>
-
-    <div class="booking-card reveal">
-      <!-- Cal.eu: karahan-kara-ac92hw/ucretsiz-gorusme (bkz. dosya sonundaki embed script) -->
-      <div id="cal-booking-placeholder"></div>
-    </div>
-
-    <p class="booking-alt reveal">Takvim yerine önce sohbet etmeyi mi tercih edersiniz? <a href="https://wa.me/905324556114" target="_blank" rel="noopener">WhatsApp'tan yazın →</a></p>
-  </div>
-</section>
-
-<!-- ============ S.S.S ============ -->
-<section class="section section-tint" id="sss">
-  <img src="assets/logo-icon.png" alt="" class="section-watermark" aria-hidden="true">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="kicker reveal">S.S.S</p>
-      <h2 class="reveal">Aklınıza takılan bir şey olabilir.</h2>
-      <p class="section-note reveal">En çok sorulan sekiz soruyu topladık. Aradığınızı bulamazsanız Caras Asistan'a sorabilir ya da doğrudan WhatsApp'tan yazabilirsiniz.</p>
-    </div>
-
-    <div class="faq-list">
-      <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          <span class="faq-num">01</span>
-          <span class="faq-q-text">Sözleşme süresi var mı, istediğim zaman iptal edebilir miyim?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer-wrap"><div class="faq-answer-inner"><p>Aylık pakette istediğiniz zaman iptal edebilirsiniz, herhangi bir taahhüt yoktur. 3 Aylık ve 6 Aylık paketler, daha uzun taahhüt karşılığında %10 ve %20 fiyat avantajı sunar; bu paketler seçilen süre boyunca geçerlidir.</p></div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          <span class="faq-num">02</span>
-          <span class="faq-q-text">Reklam bütçesi paket fiyatına dahil mi?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer-wrap"><div class="faq-answer-inner"><p>Hayır. Paket ücretlerimiz yönetim ve hizmet bedelidir; reklam bütçesi pakete dahil olmayıp doğrudan Meta'ya (Facebook/Instagram) ödenir.</p></div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          <span class="faq-num">03</span>
-          <span class="faq-q-text">Ücretsiz Zoom görüşmesinde ne konuşuyoruz?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer-wrap"><div class="faq-answer-inner"><p>30 dakikalık görüşmede markanızı, hedeflerinizi ve mevcut durumunuzu dinleyip Meta reklamlarıyla nasıl büyüyebileceğinizi anlatıyoruz. Bu görüşme tamamen ücretsiz ve satış baskısı içermez.</p></div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          <span class="faq-num">04</span>
-          <span class="faq-q-text">Video ve fotoğrafları siz mi çekiyorsunuz?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer-wrap"><div class="faq-answer-inner"><p>Size nasıl video ve fotoğraf çekeceğinizi gösteriyoruz; siz çektikten sonra materyali kurgulayıp reklam formatına, Reels'e ve statik reklamlara uyarlıyoruz. Sıfırdan profesyonel prodüksiyon (ekip/ekipmanla çekim) paketlerimize dahil değildir, talep halinde ayrıca planlanabilir.</p></div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          <span class="faq-num">05</span>
-          <span class="faq-q-text">Hangi sektörlerle ve şehirlerle çalışıyorsunuz?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer-wrap"><div class="faq-answer-inner"><p>Hizmetimiz tamamen dijital yürütüldüğü için şehir sınırı yoktur. Türkiye'nin her ilindeki işletmeye — İstanbul'dan Van'a — her sektörden aynı kalitede hizmet veriyoruz.</p></div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          <span class="faq-num">06</span>
-          <span class="faq-q-text">Sonuçları nasıl raporluyorsunuz?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer-wrap"><div class="faq-answer-inner"><p>Aylık yazılı performans raporu ve düzenli strateji görüşmeleriyle nereye gittiğinizi net rakamlarla gösteriyoruz; rakip analizine dayalı büyüme ve kampanya önerileri de bu görüşmelerin parçasıdır. 3 Aylık ve üzeri paketlerde raporlama sıklığı ve derinliği artar.</p></div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          <span class="faq-num">07</span>
-          <span class="faq-q-text">Fatura kesiyor musunuz?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer-wrap"><div class="faq-answer-inner"><p>Evet, tüm paket ve ek hizmetlerimiz için KDV dahil fatura düzenlenir. Sitemizde belirtilen fiyatlara KDV dahil değildir.</p></div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-question" aria-expanded="false">
-          <span class="faq-num">08</span>
-          <span class="faq-q-text">Satın alım sonrası iade hakkım var mı?</span>
-          <span class="faq-icon" aria-hidden="true"></span>
-        </button>
-        <div class="faq-answer-wrap"><div class="faq-answer-inner"><p>Hizmetlerimiz satın alınır alınmaz emek ve zaman gerektiren, işletmenize özel olarak başlatılan dijital pazarlama çalışmalarıdır; hizmetin ifasına onayınızla başlandıktan sonra ücret iadesi yapılmamaktadır. Detaylar için <a href="mesafeli-satis-sozlesmesi.html">Mesafeli Satış Sözleşmesi</a> sayfamıza göz atabilirsiniz.</p></div></div>
-      </div>
-    </div>
-
-    <p class="faq-more reveal">Başka bir sorunuz mu var? <a href="https://wa.me/905324556114" target="_blank" rel="noopener">WhatsApp'tan yazın</a> ya da Caras Asistan'a sorun.</p>
-  </div>
-</section>
-
-<!-- ============ İLETİŞİM ============ -->
-<section class="section" id="iletisim">
-  <div class="wrap contact-grid">
-    <div class="contact-info reveal">
-      <p class="kicker">İletişim</p>
-      <h2>Konuşmaya <br>hazır mısınız?</h2>
-      <p class="contact-lead">Ücretsiz görüşme rezervasyonu için <a href="#rezervasyon">yukarıdaki takvimi</a> kullanabilirsiniz. Genel bir sorunuz varsa formu doldurun, WhatsApp üzerinden size dönelim — ya da doğrudan aşağıdaki bilgilerle bize ulaşın.</p>
-
-      <ul class="contact-list">
-        <li>
-          <span class="contact-label">WhatsApp / Telefon</span>
-          <a href="https://wa.me/905324556114">+90 532 455 6114</a>
-        </li>
-        <li>
-          <span class="contact-label">E-posta</span>
-          <a href="mailto:partner.caras@gmail.com">partner.caras@gmail.com</a>
-        </li>
-        <li>
-          <span class="contact-label">Adres</span>
-          <span>Tabaklar, İzzet Baysal Cd. Güler2 İş Hanı, 14100 Merkez/Bolu</span>
-        </li>
-        <li>
-          <span class="contact-label">Web</span>
-          <span>caraspartner.com</span>
-        </li>
-      </ul>
-    </div>
-
-    <form class="contact-form reveal" id="contactForm">
-      <div class="form-row">
-        <label for="name">Ad Soyad</label>
-        <input type="text" id="name" name="name" required placeholder="Adınız Soyadınız">
-      </div>
-      <div class="form-row">
-        <label for="brand">Marka / İşletme</label>
-        <input type="text" id="brand" name="brand" placeholder="İşletme adınız">
-      </div>
-      <div class="form-row">
-        <label for="phone">Telefon</label>
-        <input type="tel" id="phone" name="phone" required placeholder="05xx xxx xx xx">
-      </div>
-      <div class="form-row">
-        <label for="message">Mesajınız</label>
-        <textarea id="message" name="message" rows="4" placeholder="Kısaca ne yapmak istediğinizi anlatın..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-solid btn-block btn-lg">WhatsApp Üzerinden Gönder</button>
-      <p class="form-note">Gönder'e bastığınızda WhatsApp'ta önceden doldurulmuş bir mesajla sohbetimiz açılır.</p>
-    </form>
-  </div>
-</section>
-
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="wrap footer-inner">
@@ -619,8 +456,8 @@
         <a href="#hizmetler">Hizmetler</a>
         <a href="#surec">Süreç</a>
         <a href="#paketler">Paketler</a>
-        <a href="#rezervasyon">Rezervasyon</a>
-        <a href="#iletisim">İletişim</a>
+        <a href="rezervasyon.html">Rezervasyon</a>
+        <a href="iletisim.html">İletişim</a>
       </div>
       <div>
         <h4>İletişim</h4>
@@ -685,54 +522,16 @@
   </form>
 </div>
 
+<!-- ============ ÇEREZ BANNER ============ -->
+<div class="cookie-banner" id="cookieBanner" hidden>
+  <p>Bu site deneyiminizi iyileştirmek için çerezler kullanır. <a href="cerez-politikasi.html">Çerez Politikası</a></p>
+  <div class="cookie-actions">
+    <button class="btn btn-solid btn-sm" id="cookieAccept">Kabul Et</button>
+    <button class="btn btn-outline-light btn-sm" id="cookieReject">Reddet</button>
+  </div>
+</div>
+
 <script src="script.js"></script>
 
-<!-- ============ CAL.COM BOOKING EMBED ============ -->
-<script type="text/javascript">
-  (function (C, A, L) {
-    let p = function (a, ar) { a.q.push(ar); };
-    let d = C.document;
-    C.Cal = C.Cal || function () {
-      let cal = C.Cal;
-      let ar = arguments;
-      if (!cal.loaded) {
-        cal.ns = {};
-        cal.q = cal.q || [];
-        d.head.appendChild(d.createElement("script")).src = A;
-        cal.loaded = true;
-      }
-      if (ar[0] === L) {
-        const api = function () { p(api, arguments); };
-        const namespace = ar[1];
-        api.q = api.q || [];
-        if (typeof namespace === "string") {
-          cal.ns[namespace] = cal.ns[namespace] || api;
-          p(cal.ns[namespace], ar);
-          p(cal, ["initNamespace", namespace]);
-        } else p(cal, ar);
-        return;
-      }
-      p(cal, ar);
-    };
-  })(window, "https://app.cal.eu/embed/embed.js", "init");
-
-  Cal("init", "ucretsiz-gorusme", { origin: "https://cal.eu" });
-
-  Cal.ns["ucretsiz-gorusme"]("inline", {
-    elementOrSelector: "#cal-booking-placeholder",
-    calLink: "karahan-kara-ac92hw/ucretsiz-gorusme",
-    layout: "month_view"
-  });
-
-  Cal.ns["ucretsiz-gorusme"]("ui", {
-    theme: "dark",
-    cssVarsPerTheme: {
-      light: { "cal-brand": "#1F7A44" },
-      dark: { "cal-brand": "#6FCF6F" }
-    },
-    hideEventTypeDetails: false,
-    layout: "month_view"
-  });
-</script>
 </body>
 </html>
