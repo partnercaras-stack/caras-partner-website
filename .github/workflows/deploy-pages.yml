@@ -1,8 +1,9 @@
 name: Deploy to Cloudflare Pages
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ master, main ]
 
 jobs:
   deploy:
@@ -25,4 +26,4 @@ jobs:
         run: |
           # Replace 'caras-partner-website' with your Pages project name if different
           # The ANTHROPIC_API_KEY and CLAUDE_MODEL are provided from repo secrets.
-          wrangler pages publish . --project-name caras-partner-website --branch main
+          wrangler pages publish . --project-name caras-partner-website --branch ${GITHUB_REF_NAME}
