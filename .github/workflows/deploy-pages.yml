@@ -36,6 +36,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_MODEL: ${{ secrets.CLAUDE_MODEL }}
         run: |
-          # Replace 'caras-partner-website' with your Pages project name if different
+          # Cloudflare Pages project is named "caras-partner" (not caras-partner-website),
+          # and its configured Production branch is "main" — this repo's default branch is
+          # "master", so we deploy explicitly to "main" regardless of GITHUB_REF_NAME,
+          # otherwise the deploy lands as a Preview build and caraspartner.com never updates.
           # The ANTHROPIC_API_KEY and CLAUDE_MODEL are provided from repo secrets.
-          wrangler pages publish . --project-name caras-partner-website --branch ${GITHUB_REF_NAME}
+          wrangler pages deploy . --project-name caras-partner --branch main

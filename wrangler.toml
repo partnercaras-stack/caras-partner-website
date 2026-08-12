@@ -1,6 +1,5 @@
-name = "caras-partner-website"
-# Replace with your Cloudflare Account ID
-account_id = "<YOUR_CLOUDFLARE_ACCOUNT_ID>"
+name = "caras-partner"
+account_id = "91a7598da7a9ed85af7c3b496aef2ed9"
 compatibility_date = "2026-08-03"
 
 # You should set secrets in Cloudflare dashboard or with `wrangler secret put`:
