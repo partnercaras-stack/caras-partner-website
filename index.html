@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caras Partner — Meta Reklamlarında Odaklanan Büyür</title>
-<meta name="description" content="Caras Partner, Instagram ve Facebook reklamlarında uzmanlaşmış tek kanal ajansıdır. Şeffaf raporlama, uygun fiyatlı paketler ve dönüşüm odaklı yaklaşımla Türkiye'nin dört bir yanındaki markaları büyütüyoruz.">
+<title>Caras Partner — Dijital Pazarlama & Büyüme Ajansı</title>
+<meta name="description" content="Caras Partner; Meta ve Google reklamlarından SEO'ya, web sitesi ve mobil uygulamadan yapay zekâ destekli otomasyona kadar işletmenizin dijital büyümesi için ihtiyaç duyduğu çözümleri tek çatı altında sunar. Bolu merkezli, Türkiye geneli hizmet.">
+<link rel="canonical" href="https://caraspartner.com/">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,22 +22,34 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService"],
       "name": "Caras Partner",
       "url": "https://caraspartner.com",
       "logo": "https://caraspartner.com/assets/logo-icon.png",
+      "image": "https://caraspartner.com/assets/logo-full.png",
       "sameAs": [
         "https://www.instagram.com/caraspartner/",
         "https://www.facebook.com/caraspartner/"
       ],
       "email": "partner.caras@gmail.com",
+      "telephone": "+905324556114",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Tabaklar, İzzet Baysal Cd. Güler2 İş Hanı",
         "addressLocality": "Bolu",
+        "addressRegion": "Bolu",
         "postalCode": "14100",
         "addressCountry": "TR"
       },
+      "areaServed": "TR",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "18:00"
+        }
+      ],
       "contactPoint": [{
         "@type": "ContactPoint",
         "telephone": "+905324556114",
@@ -46,31 +59,16 @@
       }]
     },
     {
-      "@type": "Service",
-      "name": "Meta Reklam Yönetimi",
-      "provider": { "@type": "Organization", "name": "Caras Partner" },
-      "description": "Instagram ve Facebook reklam yönetimi, kampanya kurulumu ve optimizasyon hizmetleri.",
-      "url": "https://caraspartner.com/#hizmetler"
+      "@type": "WebSite",
+      "name": "Caras Partner",
+      "url": "https://caraspartner.com"
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Caras Partner kimdir?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Caras Partner, Instagram ve Facebook (Meta) reklamlarında uzmanlaşmış bir dijital büyüme ajansıdır; kurulum, kampanya yönetimi ve ciro odaklı optimizasyon sağlar." }
-        },
-        {
-          "@type": "Question",
-          "name": "Fiyatlar nasıl belirleniyor?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Paketlerimiz sabit bütçeli olup reklam bütçesi ayrı tutulur; detaylar için Paketler bölümüne bakınız veya ücretsiz görüşme talep edin." }
-        },
-        {
-          "@type": "Question",
-          "name": "Hangi şehirlerde hizmet veriyorsunuz?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Hizmetimiz tamamen dijital olduğu için Türkiye'nin her yerindeki markalara hizmet veriyoruz." }
-        }
-      ]
+      "@type": "Service",
+      "name": "Meta Ads Yönetimi",
+      "provider": { "@type": "Organization", "name": "Caras Partner" },
+      "description": "Instagram ve Facebook reklam yönetimi, kampanya kurulumu ve optimizasyon hizmetleri.",
+      "url": "https://caraspartner.com/hizmetler/meta-ads.html"
     }
   ]
 }
@@ -81,7 +79,7 @@
 <!-- ============ ANNOUNCEMENT BAR ============ -->
 <div class="announce-bar" id="announceBar">
   <span>
-    🔥 <strong>%25 İndirim</strong> — Son kontenjanlar dolmadan rezervasyon yapın!
+    🔥 <strong>%25 İndirim</strong> — Son kontenjanlar dolmadan randevu alın!
     <span class="announce-timer" id="countdownTimer" aria-live="polite">--</span>
     <a href="rezervasyon.html">Hemen randevu alın →</a>
   </span>
@@ -95,20 +93,88 @@
       <img src="assets/logo-icon.png" alt="" class="brand-mark">
       <span class="brand-word">Caras<em>Partner</em></span>
     </a>
-
     <nav class="main-nav" id="mainNav">
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#surec">Süreç</a>
-      <a href="#paketler">Paketler</a>
+      <a href="neden-caras.html">Neden Caras?</a>
+      <details class="nav-dropdown">
+    <summary>Hizmetler<svg class="nav-caret" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="nav-dropdown-panel nav-dropdown-panel-wide">
+      <div class="nav-dropdown-col">
+        <p class="nav-dropdown-heading">Dijital Reklamcılık</p>
+        <a href="hizmetler/google-ads.html">Google Ads</a>
+        <a href="hizmetler/meta-ads.html">Meta Ads</a>
+      </div>
+      <div class="nav-dropdown-col">
+        <p class="nav-dropdown-heading">SEO &amp; Google</p>
+        <a href="hizmetler/google-isletme-profili.html">Google İşletme Profili</a>
+        <a href="hizmetler/google-maps.html">Google Maps</a>
+        <a href="hizmetler/local-seo.html">Local SEO</a>
+        <a href="hizmetler/seo.html">SEO</a>
+      </div>
+      <div class="nav-dropdown-col">
+        <p class="nav-dropdown-heading">Web Sitesi &amp; Geliştirme</p>
+        <a href="hizmetler/landing-page.html">Landing Page</a>
+        <a href="hizmetler/web-tasarim.html">Web Tasarım</a>
+      </div>
+      <div class="nav-dropdown-col">
+        <p class="nav-dropdown-heading">Yazılım &amp; Yapay Zekâ Çözümleri</p>
+        <a href="hizmetler/ai-otomasyon.html">AI &amp; Otomasyon</a>
+        <a href="hizmetler/mobil-uygulama.html">Mobil Uygulama</a>
+        <a href="hizmetler/ozel-yazilim.html">Özel Yazılım</a>
+      </div>
+      <div class="nav-dropdown-col">
+        <p class="nav-dropdown-heading">Sosyal Medya &amp; Marka İletişimi</p>
+        <a href="hizmetler/dijital-pr.html">Dijital PR</a>
+        <a href="hizmetler/influencer-marketing.html">Influencer Marketing</a>
+        <a href="hizmetler/sosyal-medya.html">Sosyal Medya</a>
+      </div>
+      <div class="nav-dropdown-col nav-dropdown-viewall-col">
+        <a href="hizmetler.html" class="nav-dropdown-viewall">Tüm Hizmetleri Gör →</a>
+      </div>
+    </div>
+  </details>
+      <details class="nav-dropdown">
+    <summary>Sektörler<svg class="nav-caret" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="nav-dropdown-panel nav-dropdown-panel-wide">
+      <div class="nav-dropdown-col">
+        <p class="nav-dropdown-heading">Güzellik &amp; Bakım</p>
+        <a href="sektorler/guzellik-salonlari.html">Güzellik Salonları</a>
+        <a href="sektorler/kuaforler.html">Kuaförler</a>
+        <a href="sektorler/berberler.html">Berberler</a>
+      </div>
+      <div class="nav-dropdown-col">
+        <p class="nav-dropdown-heading">Sağlık &amp; Danışmanlık</p>
+        <a href="sektorler/diyetisyenler.html">Diyetisyenler</a>
+        <a href="sektorler/psikologlar.html">Psikologlar</a>
+        <a href="sektorler/dis-klinikleri.html">Diş Klinikleri</a>
+      </div>
+      <div class="nav-dropdown-col">
+        <p class="nav-dropdown-heading">Otomotiv</p>
+        <a href="sektorler/ppf-arac-kaplama.html">PPF ve Araç Kaplama Firmaları</a>
+        <a href="sektorler/oto-yikama.html">Oto Yıkama İşletmeleri</a>
+        <a href="sektorler/otomotiv.html">Otomotiv Servisleri</a>
+      </div>
+      <div class="nav-dropdown-col">
+        <p class="nav-dropdown-heading">Yaşam &amp; Ticaret</p>
+        <a href="sektorler/restoranlar.html">Restoranlar</a>
+        <a href="sektorler/emlak.html">Emlak Ofisleri</a>
+        <a href="sektorler/hukuk.html">Hukuk Büroları</a>
+        <a href="sektorler/spor-salonlari.html">Spor Salonları</a>
+        <a href="sektorler/e-ticaret.html">E-Ticaret İşletmeleri</a>
+        <a href="sektorler/yerel-isletmeler.html">Yerel İşletmeler</a>
+      </div>
+      <div class="nav-dropdown-col nav-dropdown-viewall-col">
+        <a href="sektorler.html" class="nav-dropdown-viewall">Tüm Sektörleri Gör →</a>
+      </div>
+    </div>
+  </details>
+      <a href="blog.html">Blog</a>
       <a href="iletisim.html">İletişim</a>
       <a href="sss.html">S.S.S</a>
     </nav>
-
     <div class="header-cta">
       <a href="https://wa.me/905324556114" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="rezervasyon.html" class="btn btn-solid">Ücretsiz Görüşme</a>
+      <a href="rezervasyon.html" class="btn btn-solid">Ücretsiz Dijital Analiz</a>
     </div>
-
     <button class="burger" id="burgerBtn" aria-label="Menüyü aç" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -121,40 +187,41 @@
   <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <img src="assets/logo-icon.png" alt="Caras Partner" class="hero-logo reveal">
-    <p class="eyebrow reveal">META REKLAM AJANSI · TÜRKİYE GENELİ</p>
+    <p class="eyebrow reveal">DİJİTAL BÜYÜME AJANSI · TÜRKİYE GENELİ</p>
     <h1 class="hero-title">
-      <span class="reveal" style="--d:0">Odaklanan</span>
-      <span class="reveal" style="--d:1">Büyür<span class="dot">.</span></span>
+      <span class="reveal" style="--d:0">İşletmenizi Dijitalde</span>
+      <span class="reveal" style="--d:1">Büyütüyoruz<span class="dot">.</span></span>
     </h1>
     <p class="hero-sub reveal" style="--d:2">
-      Instagram ve Facebook reklamlarında Türkiye'nin güvenilir tek kanal uzmanıyız.
-      Karmaşık ve pahalı ajans modelleri yerine net, ölçülebilir ve herkesin
-      erişebileceği bir alternatif sunuyoruz — İstanbul'dan Van'a, aynı kalitede.
+      Meta ve Google reklamlarında güçlü bir geçmişimiz var; bugün SEO'dan web sitesi ve
+      mobil uygulama geliştirmeye, yapay zekâ destekli otomasyona kadar işletmenizin dijital
+      büyümesi için ihtiyaç duyduğu çözümleri tek çatı altında sunuyoruz — hangi şehirde
+      olursanız olun, Türkiye'nin her yerinde aynı kalitede.
     </p>
     <div class="hero-actions reveal" style="--d:3">
-      <a href="rezervasyon.html" class="btn btn-solid btn-lg">Ücretsiz Zoom Görüşmesi</a>
-      <a href="https://wa.me/905324556114" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
-        <span>WhatsApp'tan Yaz</span>
+      <a href="rezervasyon.html" class="btn btn-solid btn-lg">Ücretsiz Dijital Analiz</a>
+      <a href="hizmetler.html" class="btn btn-outline btn-lg">
+        <span>Hizmetleri İncele</span>
       </a>
     </div>
   </div>
 
   <div class="hero-strip">
     <div class="strip-track">
-      <span>Strateji &amp; Hedef Kitle</span><span class="sep">✦</span>
-      <span>Kampanya Kurulumu</span><span class="sep">✦</span>
-      <span>Kreatif Üretim</span><span class="sep">✦</span>
-      <span>Ciro Artırma Danışmanlığı</span><span class="sep">✦</span>
-      <span>Strateji &amp; Hedef Kitle</span><span class="sep">✦</span>
-      <span>Kampanya Kurulumu</span><span class="sep">✦</span>
-      <span>Kreatif Üretim</span><span class="sep">✦</span>
-      <span>Ciro Artırma Danışmanlığı</span><span class="sep">✦</span>
+      <span>Meta &amp; Google Reklamları</span><span class="sep">✦</span>
+      <span>SEO &amp; Google Haritalar</span><span class="sep">✦</span>
+      <span>Web Sitesi &amp; Yazılım</span><span class="sep">✦</span>
+      <span>Yapay Zekâ &amp; Otomasyon</span><span class="sep">✦</span>
+      <span>Meta &amp; Google Reklamları</span><span class="sep">✦</span>
+      <span>SEO &amp; Google Haritalar</span><span class="sep">✦</span>
+      <span>Web Sitesi &amp; Yazılım</span><span class="sep">✦</span>
+      <span>Yapay Zekâ &amp; Otomasyon</span><span class="sep">✦</span>
     </div>
   </div>
 </section>
 
 <!-- ============ NEDEN META ============ -->
-<section class="section" id="neden-meta">
+<section class="section section-tint" id="neden-meta">
   <div class="wrap">
     <div class="section-head">
       <p class="kicker reveal">Neden Meta Reklamları?</p>
@@ -179,90 +246,6 @@
     <div class="prose-grid">
       <p class="reveal">Meta reklamlarını işletmeler için değerli kılan asıl unsur, hedeflemenin detay seviyesidir: yaş, konum, ilgi alanı ve davranışa göre kitle oluşturmak mümkündür. Görsel, video, carousel ve hikaye gibi farklı formatlar aynı bütçe içinde test edilebilir; bu da geleneksel reklamcılığa kıyasla giriş maliyetini düşürür ve özellikle KOBİ'ler için erişilebilir bir kanal hâline getirir.</p>
       <p class="reveal">Ancak ölçek ve doğru hedefleme tek başına yeterli değildir. Doğru kurulan bir kampanya net dönüşüm takibi, düzenli optimizasyon ve doğru metriklere odaklanmayı gerektirir. Bu nedenle Caras Partner olarak her kampanyada yalnızca "beğeni" ya da "erişim" değil, doğrudan <strong>ölçülebilir ciro artışını</strong> hedefliyoruz.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ NEDEN CARAS PARTNER ============ -->
-<section class="section section-tint" id="neden-biz">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="kicker reveal">Neden Caras Partner?</p>
-      <h2 class="reveal">Tek kanal. Tam odak. Net sonuç.</h2>
-    </div>
-
-    <div class="feature-grid">
-      <div class="feature-card reveal">
-        <h3>Uygun Fiyatlı</h3>
-        <p>Karmaşık, çok katmanlı ajans paketleri yerine net fiyatlandırma sunuyoruz. Taahhüt süresi uzadıkça birim fiyat düşer; sürpriz maliyet yoktur.</p>
-      </div>
-      <div class="feature-card reveal">
-        <h3>Dönüşüm Odaklı Çalışma</h3>
-        <p>Her kampanya, izlenme veya beğeni değil, doğrudan ciro artışı hedefiyle kurulur. Haftalık optimizasyon döngüsü dönüşüm verisine göre şekillenir.</p>
-      </div>
-      <div class="feature-card reveal">
-        <h3>Türkiye Geneli Hizmet</h3>
-        <p>Hizmetimiz tamamen dijital yürütüldüğü için şehir sınırı yoktur; Türkiye'nin her ilindeki işletmeye — İstanbul'dan Van'a — aynı kalitede hizmet veriyoruz.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ÇALIŞMA PRENSİPLERİ ============ -->
-<section class="section" id="prensipler">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="kicker reveal">Çalışma Prensiplerimiz</p>
-      <h2 class="reveal">Bir ortaklığın üzerine kurulduğu dört ilke.</h2>
-    </div>
-
-    <div class="principle-list">
-      <div class="principle-row reveal">
-        <h3>Şeffaflık</h3>
-        <p>Her ay net rakamlarla nereye gittiğinizi görürsünüz; erişiminiz olan reklam hesabında hiçbir şey gizli kalmaz.</p>
-      </div>
-      <div class="principle-row reveal">
-        <h3>Odak</h3>
-        <p>Tek kanalda uzmanlaştık, dikkatimiz dağılmaz; her saatimiz sizin hesabınıza gider.</p>
-      </div>
-      <div class="principle-row reveal">
-        <h3>Hesap Verebilirlik</h3>
-        <p>Aylık raporlama ve düzenli strateji görüşmeleriyle sonuçların arkasında dururuz.</p>
-      </div>
-      <div class="principle-row reveal">
-        <h3>Uzun Vadeli Ortaklık</h3>
-        <p>Tek seferlik projeler değil, markanızla birlikte büyüyen bir ilişki kurarız.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ HİZMETLER ============ -->
-<section class="section section-dark" id="hizmetler">
-  <img src="assets/logo-icon.png" alt="" class="section-watermark section-watermark-dark" aria-hidden="true">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="kicker">Hizmetlerimiz</p>
-      <h2 class="reveal">Kurulumdan raporlamaya, uçtan uca tek elden.</h2>
-    </div>
-
-    <div class="service-grid">
-      <div class="service-card reveal">
-        <h3>Strateji ve Hedef Kitle</h3>
-        <p>Markanızı, rakiplerinizi ve gerçek müşterinizi analiz ederek doğru kitleyi ve doğru mesajı belirliyoruz.</p>
-      </div>
-      <div class="service-card reveal">
-        <h3>Kampanya Kurulumu ve Optimizasyon</h3>
-        <p>Meta Business Manager kurulumundan haftalık bütçe ve hedefleme optimizasyonuna kadar tüm teknik süreç bizde.</p>
-      </div>
-      <div class="service-card reveal">
-        <h3>Kreatif Üretim</h3>
-        <p>Nasıl video ve fotoğraf çekeceğinizi gösteriyor, çektiğiniz materyali kurgulayıp reklam formatına uyarlıyor, Reels ve statik reklamlar için varyasyonlar hazırlıyoruz.</p>
-      </div>
-      <div class="service-card reveal">
-        <h3>Ciro Artırma Danışmanlığı</h3>
-        <p>Sadece reklamı değil sonucunu konuşuyoruz: rakip analizine dayalı teklif, fiyatlandırma, indirim kampanyası ve dönüşüm huninize dair öneriler sunuyoruz.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -327,7 +310,7 @@
     <div class="pricing-grid">
       <div class="price-card reveal">
         <h3>Aylık</h3>
-        <p class="price"><span>₺15.000</span><small>/ ay</small></p>
+        <p class="price"><span class="price-old">₺18.750</span><span>₺15.000</span><small>/ ay</small></p>
         <p class="price-scope">Tam kampanya yönetimi ve büyüme danışmanlığı</p>
         <ul>
           <li>Meta Business hesabı kurulumu, denetimi ve kampanya stratejisi</li>
@@ -345,69 +328,99 @@
       <div class="price-card price-featured reveal">
         <span class="price-badge">Önerilen</span>
         <h3>3 Aylık</h3>
-        <p class="price"><span>₺13.500</span><small>/ ay</small></p>
-        <p class="price-scope">Toplam ₺40.500 · %10 avantaj — Aylık paket + retargeting + öncelikli destek</p>
+        <p class="price"><span class="price-old">₺16.875</span><span>₺13.500</span><small>/ ay</small></p>
+        <p class="price-scope">Toplam ₺40.500 — Aylık paketteki her şey, sadece daha sık görüşme ve öncelikli destekle</p>
         <ul>
           <li>Aylık pakette yer alan tüm hizmetler</li>
           <li>Yeniden pazarlama (retargeting) kampanyaları</li>
           <li>Ayda 2 strateji görüşmesi</li>
           <li>Öncelikli destek — daha hızlı geri dönüş</li>
-          <li>%10 fiyat avantajı</li>
         </ul>
         <a href="https://wa.me/905324556114?text=Merhaba%2C%203%20Ayl%C4%B1k%20paket%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-lime btn-block">Başlayalım</a>
         <p class="price-vat-note">Fiyatlara KDV dahil değildir</p>
       </div>
 
       <div class="price-card reveal">
-        <h3>6 Aylık</h3>
-        <p class="price"><span>₺12.000</span><small>/ ay</small></p>
-        <p class="price-scope">Toplam ₺72.000 · %20 avantaj — 3 aylık paket + çeyreklik derin analiz</p>
+        <h3>Kurumsal</h3>
+        <p class="price"><span class="price-text">Özel Fiyatlandırma</span></p>
+        <p class="price-scope">Birden fazla marka/mağaza yöneten, sınırsız ölçekte büyümek isteyen işletmeler için</p>
         <ul>
-          <li>3 aylık pakette yer alan tüm hizmetler</li>
-          <li>Çeyreklik derin rakip ve pazar analizi</li>
-          <li>6 ay boyunca sabit fiyat garantisi</li>
-          <li>%20 fiyat avantajı</li>
+          <li>3 Aylık paketteki her şey</li>
+          <li>Özel katılım süreci ve entegre çoklu marka yönetimi</li>
+          <li>SLA garantili yanıt/raporlama süreleri</li>
+          <li>Öncelikli WhatsApp/telefon desteği ve size özel bir hesap yöneticisi</li>
         </ul>
-        <a href="https://wa.me/905324556114?text=Merhaba%2C%206%20Ayl%C4%B1k%20paket%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-outline btn-block">Başlayalım</a>
-        <p class="price-vat-note">Fiyatlara KDV dahil değildir</p>
+        <a href="rezervasyon.html" class="btn btn-outline btn-block">Teklif Alın</a>
+        <p class="price-vat-note">Minimum 3 aylık anlaşma ile fiyatlandırılır</p>
       </div>
-    </div>
-
-    <div class="enterprise-band reveal">
-      <div>
-        <p class="kicker">Kurumsal</p>
-        <h3>Özel Fiyatlandırma</h3>
-        <p>Birden fazla marka veya mağazayı tek çatı altında yöneten, sınırsız ölçekte büyümek isteyen işletmeler için. 6 aylık paketteki her şeye ek olarak: özel katılım süreci, SLA garantili yanıt/raporlama süreleri, entegre çoklu marka yönetimi, öncelikli WhatsApp/telefon desteği ve size özel bir hesap yöneticisi. Minimum 3 aylık anlaşma ile fiyatlandırılır.</p>
-      </div>
-      <a href="rezervasyon.html" class="btn btn-solid">Teklif Alın</a>
     </div>
 
     <div class="addons reveal">
-      <p class="kicker">Ek Hizmetler</p>
+      <p class="kicker">Hizmetler</p>
       <div class="addon-row">
-        <span class="addon-name">Çeyreklik Derin Analiz</span>
-        <span class="addon-desc">Rakip ve pazar analizi</span>
-        <span class="addon-price">+₺3.000 / çeyrek</span>
+        <span class="addon-name"><a href="hizmetler/web-tasarim.html">Web Sitesi Tasarımı</a></span>
+        <span class="addon-desc">Mobil uyumlu, SEO uyumlu kurumsal web sitesi tasarımı</span>
+        <span class="addon-price">₺15.000 (tek seferlik)</span>
       </div>
       <div class="addon-row">
-        <span class="addon-name">İş Geliştirme &amp; AI Entegrasyonu</span>
-        <span class="addon-desc">İşletmenize özel AI destekli süreç analizi, otomasyon ve verimlilik optimizasyonu danışmanlığı</span>
-        <span class="addon-price">+₺8.000 (tek seferlik)</span>
-      </div>
-      <div class="addon-row">
-        <span class="addon-name">Web Sitesi Tasarımı</span>
-        <span class="addon-desc">Markanıza özel, mobil uyumlu kurumsal web sitesi tasarımı ve kurulumu</span>
-        <span class="addon-price">+₺15.000 (tek seferlik)</span>
+        <span class="addon-name"><a href="hizmetler/google-ads.html">Google Ads &amp; SEO Yönetimi</a></span>
+        <span class="addon-desc">Arama reklamları ve organik SEO'yu birlikte yöneten aylık paket</span>
+        <span class="addon-price">₺10.000 / ay</span>
       </div>
       <div class="addon-row">
         <span class="addon-name">WhatsApp Business API Kurulumu</span>
-        <span class="addon-desc">Otomatik karşılama, randevu ve sipariş bildirimleri için WhatsApp entegrasyonu</span>
-        <span class="addon-price">+₺9.000 (tek seferlik)</span>
+        <span class="addon-desc">Otomatik karşılama ve bildirim için WhatsApp entegrasyonu</span>
+        <span class="addon-price">₺9.000 (tek seferlik)</span>
+      </div>
+      <div class="addon-row">
+        <span class="addon-name"><a href="hizmetler/ai-otomasyon.html">İş Geliştirme &amp; AI Entegrasyonu</a></span>
+        <span class="addon-desc">AI destekli süreç analizi ve verimlilik danışmanlığı</span>
+        <span class="addon-price">₺8.000 (tek seferlik)</span>
+      </div>
+      <div class="addon-row">
+        <span class="addon-name"><a href="hizmetler/google-isletme-profili.html">Google İşletme Profili Kurulumu</a></span>
+        <span class="addon-desc">Profil kurulumu, kategori optimizasyonu ve doğrulama desteği</span>
+        <span class="addon-price">₺5.000 (tek seferlik)</span>
+      </div>
+      <div class="addon-row">
+        <span class="addon-name"><a href="hizmetler/google-maps.html">Google Haritalar Görünürlük Paketi</a></span>
+        <span class="addon-desc">Google Haritalar optimizasyonu ve yerel arama görünürlüğü</span>
+        <span class="addon-price">₺5.000 (tek seferlik)</span>
       </div>
       <div class="addon-row">
         <span class="addon-name">Reklam Hesabı Kurtarma Desteği</span>
-        <span class="addon-desc">Kısıtlanan veya devre dışı bırakılan reklam hesabı için itiraz ve kurtarma süreci</span>
-        <span class="addon-price">+₺4.000 (tek seferlik)</span>
+        <span class="addon-desc">Kısıtlanan reklam hesapları için itiraz ve kurtarma süreci</span>
+        <span class="addon-price">₺4.000 (tek seferlik)</span>
+      </div>
+      <div class="addon-row">
+        <span class="addon-name">Çeyreklik Derin Analiz</span>
+        <span class="addon-desc">Rakip ve pazar analizi</span>
+        <span class="addon-price">₺3.000 / çeyrek</span>
+      </div>
+      <div class="addon-row">
+        <span class="addon-name"><a href="hizmetler/landing-page.html">Landing Page Tasarımı</a></span>
+        <span class="addon-desc">Kampanyaya özel, dönüşüm odaklı sayfa tasarımı</span>
+        <span class="addon-price"><a href="https://wa.me/905324556114?text=Merhaba%2C%20Landing%20Page%20tasar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Teklif Alın</a></span>
+      </div>
+      <div class="addon-row">
+        <span class="addon-name"><a href="hizmetler/sosyal-medya.html">Sosyal Medya Yönetimi</a></span>
+        <span class="addon-desc">İçerik takvimi, Reels/Stories üretimi ve yönetimi</span>
+        <span class="addon-price"><a href="https://wa.me/905324556114?text=Merhaba%2C%20Sosyal%20Medya%20Y%C3%B6netimi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Teklif Alın</a></span>
+      </div>
+      <div class="addon-row">
+        <span class="addon-name">Mobil Uygulama &amp; Özel Yazılım</span>
+        <span class="addon-desc">Randevu, sadakat ve sipariş uygulamaları; özel yazılım</span>
+        <span class="addon-price"><a href="https://wa.me/905324556114?text=Merhaba%2C%20Mobil%20Uygulama%20%2F%20%C3%96zel%20Yaz%C4%B1l%C4%B1m%20projemi%20anlatmak%20istiyorum." target="_blank" rel="noopener">Projenizi Anlatın</a></span>
+      </div>
+      <div class="addon-row">
+        <span class="addon-name"><a href="hizmetler/influencer-marketing.html">Influencer Marketing</a></span>
+        <span class="addon-desc">İçerik üretici araştırması ve kampanya yönetimi</span>
+        <span class="addon-price"><a href="https://wa.me/905324556114?text=Merhaba%2C%20Influencer%20Marketing%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">İletişime Geçin</a></span>
+      </div>
+      <div class="addon-row">
+        <span class="addon-name"><a href="hizmetler/dijital-pr.html">Dijital PR</a></span>
+        <span class="addon-desc">Marka görünürlüğü ve medya ilişkileri yönetimi</span>
+        <span class="addon-price"><a href="https://wa.me/905324556114?text=Merhaba%2C%20Dijital%20PR%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">İletişime Geçin</a></span>
       </div>
     </div>
   </div>
@@ -441,6 +454,19 @@
   </div>
 </section>
 
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+  <div class="wrap">
+    <p class="kicker reveal">Hazır mısınız?</p>
+    <h2 class="reveal">İşletmenizin dijital büyümesini birlikte konuşalım.</h2>
+    <p class="reveal">30 dakikalık ücretsiz görüşmede mevcut durumunuzu değerlendirip, hangi kanalların işletmeniz için doğru olduğunu anlatalım.</p>
+    <div class="hero-actions reveal">
+      <a href="rezervasyon.html" class="btn btn-lime btn-lg">Ücretsiz Dijital Analiz</a>
+      <a href="https://wa.me/905324556114" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="wrap footer-inner">
@@ -448,13 +474,33 @@
       <img src="assets/logo-icon.png" alt="" class="brand-mark footer-mark">
       <p>Caras Partner<br><em>Odaklanan Büyür</em></p>
     </div>
-
     <div class="footer-cols">
       <div>
+        <h4>Hizmetler</h4>
+        <a href="hizmetler/meta-ads.html">Meta Ads</a>
+        <a href="hizmetler/google-ads.html">Google Ads</a>
+        <a href="hizmetler/seo.html">SEO</a>
+        <a href="hizmetler/local-seo.html">Local SEO</a>
+        <a href="hizmetler/web-tasarim.html">Web Tasarım</a>
+        <a href="hizmetler/ai-otomasyon.html">AI &amp; Otomasyon</a>
+        <a href="hizmetler.html">Tüm Hizmetler →</a>
+      </div>
+      <div>
+        <h4>Sektörler</h4>
+        <a href="sektorler/guzellik-salonlari.html">Güzellik Salonları</a>
+        <a href="sektorler/kuaforler.html">Kuaförler</a>
+        <a href="sektorler/dis-klinikleri.html">Diş Klinikleri</a>
+        <a href="sektorler/restoranlar.html">Restoranlar</a>
+        <a href="sektorler/emlak.html">Emlak Ofisleri</a>
+        <a href="sektorler/e-ticaret.html">E-Ticaret İşletmeleri</a>
+        <a href="sektorler.html">Tüm Sektörler →</a>
+      </div>
+      <div>
         <h4>Site</h4>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#surec">Süreç</a>
-        <a href="#paketler">Paketler</a>
+        <a href="neden-caras.html">Neden Caras?</a>
+        <a href="index.html#surec">Süreç</a>
+        <a href="index.html#paketler">Paketler</a>
+        <a href="bolu.html">Bolu</a>
         <a href="rezervasyon.html">Rezervasyon</a>
         <a href="iletisim.html">İletişim</a>
       </div>
@@ -462,26 +508,17 @@
         <h4>İletişim</h4>
         <a href="https://wa.me/905324556114">+90 532 455 6114</a>
         <a href="mailto:partner.caras@gmail.com">partner.caras@gmail.com</a>
-        <span>Tabaklar, İzzet Baysal Cd. Güler2 İş Hanı, 14100 Merkez/Bolu</span>
-      </div>
-      <div>
-        <h4>Kurumsal</h4>
-        <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
-        <a href="mesafeli-satis-sozlesmesi.html">Mesafeli Satış Sözleşmesi</a>
-        <a href="kvkk-gizlilik.html">KVKK ve Gizlilik Politikası</a>
-        <a href="cerez-politikasi.html">Çerez Politikası</a>
+        <a href="https://www.google.com/maps/dir//Caras+Partner+%7C+Dijital+Reklam+Ajans%C4%B1,+Tabaklar,+%C4%B0zzet+Baysal+Cd.+G%C3%BCler2+%C4%B0%C5%9F+Han%C4%B1,+14100+Bolu+Merkez%2FBolu/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x409d3f3187a5bc9f:0xc8f31d5a3ebb548?sa=X&ved=1t:57443&ictx=111" target="_blank" rel="noopener">Tabaklar, İzzet Baysal Cd. Güler2 İş Hanı, 14100 Merkez/Bolu</a>
       </div>
     </div>
   </div>
   <div class="wrap footer-bottom">
     <p>© <span id="year"></span> Caras Partner. Tüm hakları saklıdır.</p>
-    <div class="footer-social">
-      <a href="https://www.instagram.com/caraspartner" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.3" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/></svg>
-      </a>
-      <a href="https://wa.me/905324556114" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.22.6 4.3 1.66 6.1L4 29l8.06-1.63a12.9 12.9 0 0 0 3.96.62c6.62 0 12.02-5.4 12.02-12.02C28.04 8.4 22.64 3 16.02 3zm0 21.9c-1.28 0-2.5-.25-3.66-.73l-.26-.11-4.78.97.98-4.66-.17-.27a9.9 9.9 0 0 1-1.5-5.08c0-5.44 4.42-9.86 9.86-9.86s9.86 4.42 9.86 9.86-4.4 9.88-9.86 9.88zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.16-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.06 2.85 1.2 3.05c.15.2 2.1 3.2 5.08 4.5.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
-      </a>
+    <div class="footer-legal">
+      <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+      <a href="mesafeli-satis-sozlesmesi.html">Mesafeli Satış Sözleşmesi</a>
+      <a href="kvkk-gizlilik.html">KVKK ve Gizlilik Politikası</a>
+      <a href="cerez-politikasi.html">Çerez Politikası</a>
     </div>
   </div>
 </footer>

@@ -6,6 +6,11 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon --watch . --exec node server.js",
+    "build:blog": "node scripts/build-blog.js",
+    "build:pages": "node scripts/build-pages.js",
+    "build:sitemap": "node scripts/build-sitemap.js",
+    "sync:chrome": "node scripts/sync-chrome.js",
+    "build": "npm run build:blog && npm run build:pages && npm run build:sitemap && npm run sync:chrome",
     "test:anthropic": "node scripts/test_anthropic_direct.js",
     "test:local": "node scripts/test_local_post.js"
   },

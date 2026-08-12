@@ -47,11 +47,11 @@ function getFreeFallbackReply(messages) {
   }
 
   if (includesAny(text, ['fiyat', 'ücret', 'paket', 'maliyet', 'bedel', 'tutar'])) {
-    return 'Caras Partner fiyatları KDV hariç olarak ilerliyor: tek seferlik 7.000₺, aylık 15.000₺, 3 aylık paket 13.500₺/ay. Reklam bütçesi ayrı ödenir. Daha detaylı bilgi için WhatsApp +90 532 455 6114 üzerinden yazabilirsiniz.';
+    return 'Caras Partner fiyatları KDV hariç olarak ilerliyor: Aylık paket 15.000₺/ay, 3 Aylık paket 13.500₺/ay, Kurumsal paketler ise özel fiyatlandırmayla sunuluyor. Reklam bütçesi ayrı ödenir. Daha detaylı bilgi için WhatsApp +90 532 455 6114 üzerinden yazabilirsiniz.';
   }
 
   if (includesAny(text, ['hizmet', 'ne yapıyorsunuz', 'nasıl çalışıyorsunuz', 'neler yapıyorsunuz', 'ne sunuyorsunuz'])) {
-    return 'Caras Partner, Instagram ve Facebook reklam kampanyalarını kurar, yönetir ve optimize eder. Daha fazla bilgi için WhatsApp +90 532 455 6114 üzerinden bize yazabilirsiniz.';
+    return 'Caras Partner; Meta ve Google reklamları, SEO, web sitesi/yazılım ve sosyal medya yönetimi olmak üzere dijital pazarlamanın tüm alanlarında hizmet verir. Daha fazla bilgi için WhatsApp +90 532 455 6114 üzerinden bize yazabilirsiniz.';
   }
 
   if (includesAny(text, ['instagram', 'facebook', 'meta', 'reklam', 'ads', 'hedef kitle', 'kitle', 'dönüşüm'])) {
@@ -84,6 +84,14 @@ app.post('/api/chat', async (req, res) => {
   const payload = req.body;
   if (!payload || !Array.isArray(payload.messages) || payload.messages.length === 0) {
     return jsonResponse(res, { error: 'messages array is required' }, 400);
+  }
+  if (payload.messages.length > 20) {
+    return jsonResponse(res, { error: 'Too many messages' }, 400);
+  }
+  for (const m of payload.messages) {
+    if (!m || typeof m.content !== 'string' || m.content.length === 0 || m.content.length > 4000) {
+      return jsonResponse(res, { error: 'Invalid message' }, 400);
+    }
   }
 
   const API_KEY = process.env.ANTHROPIC_API_KEY;

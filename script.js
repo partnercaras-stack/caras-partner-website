@@ -320,13 +320,21 @@ document.querySelectorAll('.faq-item').forEach((item) => {
     }
 
     try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: history })
+      });
+      const data = await res.json();
+      const reply = (data && data.reply) ? data.reply : getSiteBasedReply(text);
       typingEl.remove();
-      const reply = getSiteBasedReply(text);
       addMessage('bot', reply);
       history.push({ role: 'assistant', content: reply });
     } catch (err) {
+      const reply = getSiteBasedReply(text);
       typingEl.remove();
-      addMessage('bot', 'Bağlantı sorunu yaşıyoruz. Lütfen sayfayı http://localhost:8090/ üzerinden açıp tekrar deneyin.');
+      addMessage('bot', reply);
+      history.push({ role: 'assistant', content: reply });
     } finally {
       input.disabled = false;
       input.focus();
