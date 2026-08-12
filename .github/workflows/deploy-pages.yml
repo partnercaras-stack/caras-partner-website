@@ -30,6 +30,8 @@ jobs:
         run: npm ci
       - name: Install wrangler
         run: npm install -g wrangler
+      - name: Stage public-only deploy directory
+        run: node scripts/stage-deploy.js
       - name: Publish to Cloudflare Pages
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -41,4 +43,4 @@ jobs:
           # "master", so we deploy explicitly to "main" regardless of GITHUB_REF_NAME,
           # otherwise the deploy lands as a Preview build and caraspartner.com never updates.
           # The ANTHROPIC_API_KEY and CLAUDE_MODEL are provided from repo secrets.
-          wrangler pages deploy . --project-name caras-partner --branch main
+          wrangler pages deploy ./.deploy --project-name caras-partner --branch main

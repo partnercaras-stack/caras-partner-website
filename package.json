@@ -11,6 +11,8 @@
     "build:sitemap": "node scripts/build-sitemap.js",
     "sync:chrome": "node scripts/sync-chrome.js",
     "build": "npm run build:blog && npm run build:pages && npm run build:sitemap && npm run sync:chrome",
+    "stage:deploy": "node scripts/stage-deploy.js",
+    "deploy": "npm run build && npm run stage:deploy && wrangler pages deploy .deploy --project-name caras-partner --branch main",
     "test:anthropic": "node scripts/test_anthropic_direct.js",
     "test:local": "node scripts/test_local_post.js"
   },
