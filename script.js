@@ -262,7 +262,7 @@ document.querySelectorAll('.faq-item').forEach((item) => {
     const siteAnswers = [
       {
         test: /nasıl|ne şekilde|ne yapmalıyım|yol|süreç/,
-        answer: 'Caras Partner ile iş birliği yapmak için web sitesindeki iletişim formunu kullanabilir veya WhatsApp üzerinden +90 532 455 6114 numarasına doğrudan mesaj gönderebilirsiniz.'
+        answer: 'Caras Partner ile iş birliği yapmak için web sitesindeki iletişim formunu kullanabilir veya WhatsApp üzerinden +90 555 445 24 14 numarasına doğrudan mesaj gönderebilirsiniz.'
       },
       {
         test: /hizmet|hizmetler|neler sunuyor|neler yapılır/,
@@ -284,7 +284,7 @@ document.querySelectorAll('.faq-item').forEach((item) => {
       }
     }
 
-    return 'Bu soruya site içeriği üzerinden kesin bir yanıt veremiyorum. Lütfen WhatsApp üzerinden +90 532 455 6114 numarasına yazın, ekibimiz size yardımcı olsun.';
+    return 'Bu soruya site içeriği üzerinden kesin bir yanıt veremiyorum. Lütfen WhatsApp üzerinden +90 555 445 24 14 numarasına yazın, ekibimiz size yardımcı olsun.';
   }
 
   fab.addEventListener('click', () => {
@@ -360,7 +360,7 @@ contactForm.addEventListener('submit', (e) => {
   text += `\nTelefon: ${phone}`;
   if (message) text += `\nMesaj: ${message}`;
 
-  const url = `https://wa.me/905324556114?text=${encodeURIComponent(text)}`;
+  const url = `https://wa.me/905554452414?text=${encodeURIComponent(text)}`;
   window.open(url, '_blank', 'noopener');
 });
 }

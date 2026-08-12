@@ -191,7 +191,8 @@ function renderFooter(base) {
       </div>
       <div>
         <h4>İletişim</h4>
-        <a href="${WHATSAPP}">${escapeHtml(business.telephoneDisplay)}</a>
+        <a href="${WHATSAPP}" target="_blank" rel="noopener">${escapeHtml(business.telephoneDisplay)}</a>
+        <a href="${business.whatsappSecondary}" target="_blank" rel="noopener">${escapeHtml(business.telephoneSecondaryDisplay)}</a>
         <a href="mailto:${business.email}">${escapeHtml(business.email)}</a>
         <a href="${business.mapsUrl}" target="_blank" rel="noopener">${escapeHtml(business.addressDisplay)}</a>
       </div>

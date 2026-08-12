@@ -10,9 +10,13 @@ module.exports = {
   logo: 'https://caraspartner.com/assets/logo-icon.png',
   logoFull: 'https://caraspartner.com/assets/logo-full.png',
   email: 'partner.caras@gmail.com',
-  telephone: '+905324556114',
-  telephoneDisplay: '+90 532 455 6114',
-  whatsapp: 'https://wa.me/905324556114',
+  telephone: '+905554452414',
+  telephoneDisplay: '+90 555 445 24 14',
+  whatsapp: 'https://wa.me/905554452414',
+  // Kept as a secondary contact line — still routes to WhatsApp on its own number.
+  telephoneSecondary: '+905324556114',
+  telephoneSecondaryDisplay: '+90 532 455 6114',
+  whatsappSecondary: 'https://wa.me/905324556114',
   address: {
     streetAddress: 'Tabaklar, İzzet Baysal Cd. Güler2 İş Hanı',
     addressLocality: 'Bolu',

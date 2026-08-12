@@ -38,7 +38,7 @@ Diğer hizmetler ve fiyatları (sabit fiyatlı olanlar; belirtilmeyenler proje k
 Neden Caras Partner: Uygun fiyatlı (taahhüt uzadıkça birim fiyat düşer), dönüşüm odaklı (ciro hedefli), Türkiye geneli hizmet (İstanbul'dan Van'a aynı kalite).
 Çalışma prensipleri: Şeffaflık, Odak, Hesap Verebilirlik, Uzun Vadeli Ortaklık.
 
-İletişim: WhatsApp/Telefon +90 532 455 6114, e-posta partner.caras@gmail.com, caraspartner.com. Merkez/Bolu — Türkiye geneli dijital olarak hizmet verilir. Çalışma saatleri: Pazartesi–Cumartesi 10:00–18:00, Pazar kapalı.
+İletişim: WhatsApp/Telefon +90 555 445 24 14, e-posta partner.caras@gmail.com, caraspartner.com. Merkez/Bolu — Türkiye geneli dijital olarak hizmet verilir. Çalışma saatleri: Pazartesi–Cumartesi 10:00–18:00, Pazar kapalı.
 
 SIKÇA SORULAN SORULAR (bu cevapları esas al):
 - Sözleşme/iptal: Aylık pakette istediğin zaman iptal edilebilir, taahhüt yok. 3 Aylık paket seçilen süre boyunca geçerlidir. Kurumsal paket minimum 3 aylık anlaşma gerektirir.
@@ -50,7 +50,7 @@ SIKÇA SORULAN SORULAR (bu cevapları esas al):
 
 KURALLARIN:
 1. SADECE dijital pazarlama/reklamcılık (Meta Ads, Google Ads, SEO, web, sosyal medya vb.) ve Caras Partner'ın kendi hizmetleri/paketleri/süreci hakkındaki sorulara cevap ver.
-2. Kullanıcı alakasız bir konu sorarsa (Caras Partner'ın hizmetleriyle ilgisi olmayan herhangi bir şey — genel sohbet, başka konular, kişisel tavsiye vb.), KISA bir şekilde bu konuda yardımcı olamayacağını belirt ve doğrudan WhatsApp'a yönlendir: "+90 532 455 6114 üzerinden ekibimizle görüşebilirsiniz." Bu tür sorularda ASLA konunun kendisine cevap verme.
+2. Kullanıcı alakasız bir konu sorarsa (Caras Partner'ın hizmetleriyle ilgisi olmayan herhangi bir şey — genel sohbet, başka konular, kişisel tavsiye vb.), KISA bir şekilde bu konuda yardımcı olamayacağını belirt ve doğrudan WhatsApp'a yönlendir: "+90 555 445 24 14 üzerinden ekibimizle görüşebilirsiniz." Bu tür sorularda ASLA konunun kendisine cevap verme.
 3. Kesin bilmediğin, yukarıda verilmeyen bir detay (özel indirim, istisna, hukuki/sözleşmesel detay, teknik garanti vb.) sorulursa ya da soru karmaşık/çok spesifik bir vakaya özelse uydurma; bunun için mutlaka ekiple WhatsApp üzerinden görüşmesi gerektiğini söyle.
 4. Her anlamlı cevabın sonunda nazikçe ücretsiz Zoom görüşmesine ya da WhatsApp'a yönlendirerek konuşmayı bir sonraki adıma taşımaya çalış (aşırıya kaçmadan, doğal bir şekilde).
 5. Türkçe, sıcak, profesyonel ve kısa (2-4 cümle) yanıtlar ver. Gereksiz uzun paragraflar yazma.
@@ -74,7 +74,7 @@ export async function onRequestPost(context) {
     const anthropicApiKey = env.ANTHROPIC_API_KEY;
     if (!anthropicApiKey) {
       console.error("ANTHROPIC_API_KEY is not set");
-      return jsonResponse({ reply: "Asistan şu anda kullanılamıyor. WhatsApp üzerinden yazabilirsiniz: +90 532 455 6114" });
+      return jsonResponse({ reply: "Asistan şu anda kullanılamıyor. WhatsApp üzerinden yazabilirsiniz: +90 555 445 24 14" });
     }
 
     let payload;
@@ -115,17 +115,17 @@ export async function onRequestPost(context) {
     if (!response.ok) {
       const errText = await response.text();
       console.error("Anthropic API error:", response.status, errText);
-      return jsonResponse({ reply: "Asistan şu anda yanıt veremiyor. WhatsApp üzerinden yazabilirsiniz: +90 532 455 6114" });
+      return jsonResponse({ reply: "Asistan şu anda yanıt veremiyor. WhatsApp üzerinden yazabilirsiniz: +90 555 445 24 14" });
     }
 
     const data = await response.json();
     const reply = data.completion ||
       (data.output && data.output[0] && data.output[0].content && data.output[0].content[0] && data.output[0].content[0].text) ||
       (data.content && data.content[0] && data.content[0].text);
-    return jsonResponse({ reply: reply || "Üzgünüm, şu anda yanıt veremiyorum. WhatsApp: +90 532 455 6114" });
+    return jsonResponse({ reply: reply || "Üzgünüm, şu anda yanıt veremiyorum. WhatsApp: +90 555 445 24 14" });
   } catch (err) {
     console.error("Unhandled error in chat function:", err);
-    return jsonResponse({ reply: "Bir hata oluştu. WhatsApp üzerinden yazabilirsiniz: +90 532 455 6114" });
+    return jsonResponse({ reply: "Bir hata oluştu. WhatsApp üzerinden yazabilirsiniz: +90 555 445 24 14" });
   }
 }
 

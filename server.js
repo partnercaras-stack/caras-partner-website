@@ -39,34 +39,34 @@ function getFreeFallbackReply(messages) {
   const text = (last && last.content ? String(last.content) : '').trim().toLowerCase();
 
   if (!text) {
-    return 'Merhaba! Caras Partner olarak Meta reklam kampanyalarında destek sağlıyoruz. Daha detaylı bilgi için WhatsApp +90 532 455 6114 üzerinden bize yazabilirsiniz.';
+    return 'Merhaba! Caras Partner olarak Meta reklam kampanyalarında destek sağlıyoruz. Daha detaylı bilgi için WhatsApp +90 555 445 24 14 üzerinden bize yazabilirsiniz.';
   }
 
   if (includesAny(text, ['merhaba', 'selam', 'iyi günler', 'nasılsın', 'selamlar'])) {
-    return 'Merhaba! Caras Partner olarak Meta reklam kampanyalarınızda destek sağlıyoruz. Daha detaylı bilgi için WhatsApp +90 532 455 6114 üzerinden yazabilirsiniz.';
+    return 'Merhaba! Caras Partner olarak Meta reklam kampanyalarınızda destek sağlıyoruz. Daha detaylı bilgi için WhatsApp +90 555 445 24 14 üzerinden yazabilirsiniz.';
   }
 
   if (includesAny(text, ['fiyat', 'ücret', 'paket', 'maliyet', 'bedel', 'tutar'])) {
-    return 'Caras Partner fiyatları KDV hariç olarak ilerliyor: Aylık paket 15.000₺/ay, 3 Aylık paket 13.500₺/ay, Kurumsal paketler ise özel fiyatlandırmayla sunuluyor. Reklam bütçesi ayrı ödenir. Daha detaylı bilgi için WhatsApp +90 532 455 6114 üzerinden yazabilirsiniz.';
+    return 'Caras Partner fiyatları KDV hariç olarak ilerliyor: Aylık paket 15.000₺/ay, 3 Aylık paket 13.500₺/ay, Kurumsal paketler ise özel fiyatlandırmayla sunuluyor. Reklam bütçesi ayrı ödenir. Daha detaylı bilgi için WhatsApp +90 555 445 24 14 üzerinden yazabilirsiniz.';
   }
 
   if (includesAny(text, ['hizmet', 'ne yapıyorsunuz', 'nasıl çalışıyorsunuz', 'neler yapıyorsunuz', 'ne sunuyorsunuz'])) {
-    return 'Caras Partner; Meta ve Google reklamları, SEO, web sitesi/yazılım ve sosyal medya yönetimi olmak üzere dijital pazarlamanın tüm alanlarında hizmet verir. Daha fazla bilgi için WhatsApp +90 532 455 6114 üzerinden bize yazabilirsiniz.';
+    return 'Caras Partner; Meta ve Google reklamları, SEO, web sitesi/yazılım ve sosyal medya yönetimi olmak üzere dijital pazarlamanın tüm alanlarında hizmet verir. Daha fazla bilgi için WhatsApp +90 555 445 24 14 üzerinden bize yazabilirsiniz.';
   }
 
   if (includesAny(text, ['instagram', 'facebook', 'meta', 'reklam', 'ads', 'hedef kitle', 'kitle', 'dönüşüm'])) {
-    return 'Meta reklamlarında doğru hedef kitle ve yaratıcı materyal önemlidir. Caras Partner olarak reklam kurulum, optimizasyon ve raporlama yapıyoruz. Daha detaylı destek için WhatsApp +90 532 455 6114 üzerinden yazabilirsiniz.';
+    return 'Meta reklamlarında doğru hedef kitle ve yaratıcı materyal önemlidir. Caras Partner olarak reklam kurulum, optimizasyon ve raporlama yapıyoruz. Daha detaylı destek için WhatsApp +90 555 445 24 14 üzerinden yazabilirsiniz.';
   }
 
   if (includesAny(text, ['whatsapp', 'zoom', 'görüşme', 'toplantı', 'randevu'])) {
-    return 'Ücretsiz Zoom görüşmesi ve WhatsApp desteği için +90 532 455 6114 üzerinden bize ulaşabilirsiniz.';
+    return 'Ücretsiz Zoom görüşmesi ve WhatsApp desteği için +90 555 445 24 14 üzerinden bize ulaşabilirsiniz.';
   }
 
   if (includesAny(text, ['başlangıç', 'nasıl', 'ne yapmalıyım', 'ne önerirsiniz', 'yönlendirme'])) {
-    return 'Meta reklamlarına başlamak için hedef kitlenizi ve bütçenizi netleştirmek önemlidir. Caras Partner olarak bu süreci yönetiyoruz; lütfen WhatsApp +90 532 455 6114 üzerinden bize yazın.';
+    return 'Meta reklamlarına başlamak için hedef kitlenizi ve bütçenizi netleştirmek önemlidir. Caras Partner olarak bu süreci yönetiyoruz; lütfen WhatsApp +90 555 445 24 14 üzerinden bize yazın.';
   }
 
-  return 'Bu soruya site içeriği üzerinden net yanıt veremiyorum. Lütfen WhatsApp +90 532 455 6114 üzerinden ekibimizle iletişime geçin.';
+  return 'Bu soruya site içeriği üzerinden net yanıt veremiyorum. Lütfen WhatsApp +90 555 445 24 14 üzerinden ekibimizle iletişime geçin.';
 }
 
 function maskKey(k) {
