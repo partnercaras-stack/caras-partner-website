@@ -430,7 +430,7 @@ input,textarea{font-family:inherit;font-size:1rem;}
 
 .addons{border-top:1px solid var(--line);padding-top:32px;}
 .addon-row{
-  display:grid;grid-template-columns:0.9fr 1.4fr 190px;gap:20px;align-items:start;justify-items:start;
+  display:grid;grid-template-columns:0.9fr 1.3fr 230px;gap:20px;align-items:start;justify-items:start;
   padding:18px 0;border-bottom:1px solid var(--line-soft);
 }
 .addon-name,.addon-desc,.addon-price{display:block;width:100%;text-align:left;}

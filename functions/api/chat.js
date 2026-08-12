@@ -25,14 +25,14 @@ Meta Ads paketleri (KDV hariç, reklam bütçesi pakete dahil değil, doğrudan 
 - 6 Aylık paket artık sunulmuyor; o ihtiyaç için Kurumsal paket öneriliyor.
 
 Diğer hizmetler ve fiyatları (sabit fiyatlı olanlar; belirtilmeyenler proje kapsamına göre WhatsApp üzerinden teklif ile fiyatlandırılır):
-- Web Sitesi Tasarımı: 15.000₺ (tek seferlik)
+- Web Sitesi Tasarımı: 10.000₺'den başlayan
 - Google Ads & SEO Yönetimi: 10.000₺/ay
-- WhatsApp Business API Kurulumu: 9.000₺ (tek seferlik)
-- İş Geliştirme & AI Entegrasyonu: 8.000₺ (tek seferlik)
-- Google İşletme Profili Kurulumu: 5.000₺ (tek seferlik)
-- Google Haritalar Görünürlük Paketi: 5.000₺ (tek seferlik)
-- Reklam Hesabı Kurtarma Desteği: 4.000₺ (tek seferlik)
-- Çeyreklik Derin Analiz: 3.000₺/çeyrek
+- WhatsApp Business API Kurulumu: 10.000₺'den başlayan
+- İş Geliştirme & AI Entegrasyonu: 15.000₺'den başlayan
+- Google İşletme Profili Kurulumu: 5.000₺
+- Google Haritalar & Yerel SEO: 5.000₺'den başlayan/ay
+- Reklam Hesabı Kurtarma Desteği: 5.000₺'den başlayan
+- Çeyreklik Derin Analiz: 7.500₺/çeyrek
 - Landing Page Tasarımı, Sosyal Medya Yönetimi, Mobil Uygulama & Özel Yazılım, Influencer Marketing, Dijital PR: fiyat kapsam bazlı belirlenir, WhatsApp üzerinden teklif alınır.
 
 Neden Caras Partner: Uygun fiyatlı (taahhüt uzadıkça birim fiyat düşer), dönüşüm odaklı (ciro hedefli), Türkiye geneli hizmet (İstanbul'dan Van'a aynı kalite).
