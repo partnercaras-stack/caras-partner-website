@@ -11,8 +11,15 @@ const DEFAULT_MODEL = process.env.CLAUDE_MODEL || 'claude-sonnet-5';
 
 app.use(express.json({ limit: '256kb' }));
 
-// Serve static files from project root
-app.use(express.static(path.join(__dirname)));
+// Serve static files from project root with Cloudflare Pages-style clean URLs:
+// "/hizmetler" -> hizmetler.html even though a hizmetler/ folder also exists.
+app.use((req, res, next) => {
+  if (req.method !== 'GET' || path.extname(req.path)) return next();
+  const file = path.join(__dirname, `${req.path.replace(/\/$/, '')}.html`);
+  if (file.startsWith(__dirname) && require('fs').existsSync(file)) return res.sendFile(file);
+  next();
+});
+app.use(express.static(path.join(__dirname), { extensions: ['html'], redirect: false }));
 
 function jsonResponse(res, body, status = 200) {
   res.status(status).json(body);

@@ -6,9 +6,9 @@
 module.exports = {
   name: 'Caras Partner',
   legalName: 'Caras Partner',
-  url: 'https://caraspartner.com',
-  logo: 'https://caraspartner.com/assets/logo-icon.png',
-  logoFull: 'https://caraspartner.com/assets/logo-full.png',
+  url: 'https://www.caraspartner.com',
+  logo: 'https://www.caraspartner.com/assets/logo-icon.png',
+  logoFull: 'https://www.caraspartner.com/assets/logo-full.png',
   email: 'partner.caras@gmail.com',
   telephone: '+905554452414',
   telephoneDisplay: '+90 555 445 24 14',

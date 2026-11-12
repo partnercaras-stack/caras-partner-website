@@ -3,7 +3,7 @@
 // collection — no aggregator needed.
 module.exports = {
   title: 'Bolu Dijital Pazarlama ve Reklam Ajansı',
-  metaDescription: 'Caras Partner, Bolu merkezli dijital pazarlama ve reklam ajansıdır. Meta Ads, Google Ads, SEO, web sitesi ve yapay zekâ destekli çözümlerle Bolu’daki işletmelere hizmet veriyoruz.',
+  metaDescription: 'Bolu merkezli dijital pazarlama ve reklam ajansı Caras Partner: Meta Ads, Google Ads, SEO, web sitesi ve yapay zekâ çözümleriyle Bolu’daki işletmelere hizmet.',
   primaryKeyword: 'bolu reklam ajansı',
   excerpt: 'Bolu merkezli, Türkiye geneline hizmet veren dijital pazarlama ve reklam ajansı.',
   faq: [

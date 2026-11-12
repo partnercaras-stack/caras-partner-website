@@ -185,6 +185,7 @@ function renderFooter(base) {
         <a href="${base}neden-caras.html">Neden Caras?</a>
         <a href="${base}index.html#surec">Süreç</a>
         <a href="${base}index.html#paketler">Paketler</a>
+        <a href="${base}index.html#referanslar">Referanslar</a>
         <a href="${base}bolu.html">Bolu</a>
         <a href="${base}rezervasyon.html">Rezervasyon</a>
         <a href="${base}iletisim.html">İletişim</a>

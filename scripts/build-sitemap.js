@@ -16,24 +16,24 @@ const ROOT = path.join(__dirname, '..');
 function buildSitemap() {
   const staticPages = [
     { loc: '/', priority: '1.0' },
-    { loc: '/bolu.html', priority: '0.9' },
-    { loc: '/hizmetler.html', priority: '0.9' },
-    { loc: '/sektorler.html', priority: '0.9' },
-    { loc: '/blog.html', priority: '0.9' },
-    { loc: '/neden-caras.html', priority: '0.6' },
-    { loc: '/iletisim.html', priority: '0.7' },
-    { loc: '/rezervasyon.html', priority: '0.7' },
-    { loc: '/sss.html', priority: '0.6' },
-    { loc: '/kvkk-gizlilik.html', priority: '0.3' },
-    { loc: '/cerez-politikasi.html', priority: '0.3' },
-    { loc: '/kullanim-kosullari.html', priority: '0.3' },
-    { loc: '/mesafeli-satis-sozlesmesi.html', priority: '0.3' }
+    { loc: '/bolu', priority: '0.9' },
+    { loc: '/hizmetler', priority: '0.9' },
+    { loc: '/sektorler', priority: '0.9' },
+    { loc: '/blog', priority: '0.9' },
+    { loc: '/neden-caras', priority: '0.6' },
+    { loc: '/iletisim', priority: '0.7' },
+    { loc: '/rezervasyon', priority: '0.7' },
+    { loc: '/sss', priority: '0.6' },
+    { loc: '/kvkk-gizlilik', priority: '0.3' },
+    { loc: '/cerez-politikasi', priority: '0.3' },
+    { loc: '/kullanim-kosullari', priority: '0.3' },
+    { loc: '/mesafeli-satis-sozlesmesi', priority: '0.3' }
   ];
 
-  const servicePages = services.map((s) => ({ loc: `/hizmetler/${s.slug}.html`, priority: '0.85' }));
-  const industryPages = industries.map((i) => ({ loc: `/sektorler/${i.slug}.html`, priority: '0.85' }));
+  const servicePages = services.map((s) => ({ loc: `/hizmetler/${s.slug}`, priority: '0.85' }));
+  const industryPages = industries.map((i) => ({ loc: `/sektorler/${i.slug}`, priority: '0.85' }));
   const blogPages = articles.map((a) => ({
-    loc: `/blog/${a.slug}.html`,
+    loc: `/blog/${a.slug}`,
     lastmod: a.updatedDate,
     priority: a.pillar ? '0.9' : '0.8'
   }));

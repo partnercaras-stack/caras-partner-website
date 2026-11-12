@@ -161,8 +161,9 @@ function renderServicePage(service) {
       '@type': 'Service',
       name: service.title,
       description: service.metaDescription,
-      provider: { '@type': 'Organization', name: T.business.name, url: T.SITE_URL },
-      areaServed: T.business.areaServed,
+      serviceType: service.navLabel,
+      provider: { '@type': 'Organization', '@id': `${T.SITE_URL}/#organization`, name: T.business.name, url: T.SITE_URL },
+      areaServed: { '@type': 'Country', name: 'Türkiye' },
       url
     },
     T.breadcrumbJsonLd([
@@ -242,14 +243,25 @@ function renderServicesHub() {
     T.breadcrumbJsonLd([
       { label: 'Ana Sayfa', url: T.SITE_URL },
       { label: 'Hizmetler', url: `${T.SITE_URL}/hizmetler.html` }
-    ])
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Caras Partner Hizmetleri',
+      itemListElement: services.map((s, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: s.title,
+        url: `${T.SITE_URL}/hizmetler/${s.slug}.html`
+      }))
+    }
   ];
 
   const html =
     T.renderHead({
       base,
-      title: 'Hizmetler | Caras Partner — Dijital Pazarlama & Büyüme Ajansı',
-      description: 'Meta Ads, Google Ads, SEO, web tasarım, mobil uygulama, sosyal medya, influencer marketing, dijital PR ve AI otomasyon hizmetleri.',
+      title: 'Dijital Pazarlama Hizmetleri | Caras Partner',
+      description: "Google Ads, Meta Ads, SEO, web tasarım, sosyal medya ve yapay zekâ destekli otomasyon: Caras Partner'ın tüm dijital pazarlama hizmetleri tek sayfada.",
       canonicalPath: '/hizmetler.html',
       jsonLd
     }) +
@@ -260,7 +272,7 @@ function renderServicesHub() {
     ${T.renderBreadcrumb([{ label: 'Ana Sayfa', href: 'index.html' }, { label: 'Hizmetler' }])}
     <p class="kicker">Hizmetler</p>
     <h1>İşletmenizin dijital büyümesi için ihtiyaç duyduğu her şey.</h1>
-    <p class="blog-hero-sub">Reklamdan SEO'ya, web sitesinden yapay zekâ destekli otomasyona kadar 8 ana başlıkta topladığımız hizmetlerimiz. Her biri kendi sayfasında detaylı biçimde anlatılıyor.</p>
+    <p class="blog-hero-sub">Reklamdan SEO'ya, web sitesinden yapay zekâ destekli otomasyona kadar 5 ana başlıkta topladığımız hizmetlerimiz. Her biri kendi sayfasında detaylı biçimde anlatılıyor.</p>
   </div>
 </section>
 
@@ -414,6 +426,7 @@ function renderBoluPage() {
     {
       '@context': 'https://schema.org',
       '@type': ['Organization', 'ProfessionalService'],
+      '@id': `${T.SITE_URL}/#organization`,
       name: T.business.name,
       url: T.business.url,
       logo: T.business.logo,
